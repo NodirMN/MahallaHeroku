@@ -27,7 +27,6 @@ router.post('/del', auth, async (req, res) => {
 })
 
 router.post('/', auth, async (req, res) => {
-    try {
         let {
             name,
             namem,
@@ -55,8 +54,6 @@ router.post('/', auth, async (req, res) => {
         let img = 'images/noimage.jpg'
         if (req.file)
             img = req.file.path
-
-        
         const book = await new Book({
             name,
             namem,
@@ -83,9 +80,7 @@ router.post('/', auth, async (req, res) => {
         })
         await book.save()
         res.redirect('/book/')
-    } catch (error) {
-        console.log(error);
-    }
+
 })
 
 router.post('/save', auth, async (req,res) => {

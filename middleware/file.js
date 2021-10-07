@@ -5,12 +5,12 @@ const storage = multer.diskStorage({
         cb(null, 'images/')
     },
     filename(req, file, cb) {
-        cb(null, new Date().toISOString().replace(/:/g,'-')+'_'+file.originalname)
+        cb(null,new Date().toISOString().replace(/:/g,'-')+'_'+file.originalname)
     }
 })
 const arrTypes = ['image/jpg', 'image/png', 'image/jpeg', 'image/svg+xml', 'image/webp']
-const fileFilter = (req, file, cb) => {
-    if (arrTypes.includes(file.mimetype)) {
+const FormData = (req, file, cb) => {
+    if (arrTypes.includes(file.mimeType)) {
         cb(null, true )
     } else {
         cb(null, false)
@@ -18,5 +18,5 @@ const fileFilter = (req, file, cb) => {
 }
 module.exports = multer({
     storage,
-    fileFilter
+    FormData
 })

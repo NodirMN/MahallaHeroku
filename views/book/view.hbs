@@ -13,7 +13,7 @@
                     <i class="fas fa-pen mr-2"></i>
                     Tahrirlash
                 </a>
-                <form action="/book/del/" method="post" onSubmit="return confirm('Aniqmi?');" class="ml-3">
+                <form action="/book/del/" method="post" onSubmit="return confirm('Aniqmi?');" class="ml-3" >
                     <input type="hidden" name="_csrf" value="{{csrf}}">
                     <input type="hidden" name="_id" value="{{book._id}}">
                     <button class="btn btn-danger mb-4 mr-4">

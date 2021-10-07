@@ -30,9 +30,11 @@ router.post('/del', auth, async (req, res) => {
 router.post('/', auth, async (req, res) => {
     try{
     let {namem, iron,adress,name,work,year,count,genreId,counts,child,marrid,typem,tel,typef,typema,yearmar,father,mat,yearfat,mather,yearmat,text,group,} = req.body
-    let img = 'images/noimage.jpg'
-    if (req.file)
-        img = req.gile.path
+    let img = 'images/noimg.jpg'
+    if (req.file.path)
+        img = req.file.path
+
+        
     name = name.toLowerCase()
     const invalidb = await new Invalidb({
                 namem, iron, img, adress, name, work, year, count, tel, genreId, counts, child, marrid, yearmar, mat, text, typem, typef, typema, father, yearfat, mather, yearmat, text, group,

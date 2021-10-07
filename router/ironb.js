@@ -56,7 +56,7 @@ router.post('/', auth, async (req, res) => {
 
     let img = 'images/noimage.jpg'
     if (req.file)
-        img = req.gile.path
+        img = req.file.path
     
     const ironb = await new Ironb({
                 namem,

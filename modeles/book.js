@@ -1,32 +1,32 @@
-const {Schema,model} = require('mongoose')
+const {
+    Schema,
+    model
+} = require('mongoose')
 const file = require('../middleware/file')
 
 const book = new Schema({
-     name: {
-         type: String,
-         required: true
-     },
+    name: {
+        type: String,
+        required: true
+    },
     adress: String,
-    names:String,
+    names: String,
     year: String,
     counts: String,
     count: String,
-    mat:String,
+    mat: String,
     page: String,
-    work:String,
+    work: String,
     genreId: {
         type: Schema.Types.ObjectId,
         ref: 'Genre'
     },
     child: String,
-    tel:Number,
+    tel: Number,
     marrid: String,
     typem: String,
-    namem:String,
-    img: {
-        type: String,
-        required: true
-    },
+    namem: String,
+    img: String,
     yearmar: String,
     father: String,
     typef: String,
@@ -35,8 +35,8 @@ const book = new Schema({
     typema: String,
     yearmat: String,
     text: String,
-    yearmar:String,
-    
+    yearmar: String,
+
 
 })
 
